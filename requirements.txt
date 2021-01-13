@@ -4,13 +4,9 @@ Flask-Login
 Flask-SQLAlchemy
 itsdangerous
 MarkupSafe
-SQLAlchemy
 Werkzeug
 flask_migrate
-unittest
 flask_mail
-threading
 flask_moment
 flask_bootstrap
 flask_wtf
-wtforms
