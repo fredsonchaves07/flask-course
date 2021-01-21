@@ -11,3 +11,4 @@ flask_moment
 flask_bootstrap
 flask_test
 flask_wtf
+email_validator
