@@ -1,0 +1,18 @@
+Metadata-Version: 1.1
+Name: Flask-Test
+Version: 0.1.6
+Summary: Various unit testing helpers for Flask applications.
+Home-page: http://github.com/kvesteri/flask-test
+Author: Konsta Vesterinen
+Author-email: konsta.vesterinen@gmail.com
+License: MIT
+Description: Various unit testing helpers for Flask applications.
+Platform: any
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Web Environment
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python
+Classifier: Topic :: Internet :: WWW/HTTP :: Dynamic Content
+Classifier: Topic :: Software Development :: Libraries :: Python Modules
