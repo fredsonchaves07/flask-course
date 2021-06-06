@@ -11,12 +11,8 @@ def make_shell_context():
 
 
 @app.cli.command()
-@click.argument('test_names', nargs=-1)
-def test(test_names):
+def test():
     """Run the unit tests."""
     import unittest
-    if test_names:
-        tests = unittest.TestLoader().loadTestsFromNames(test_names)
-    else:
-        tests = unittest.TestLoader().discover('tests')
+    tests = unittest.TestLoader().discover('tests')
     unittest.TextTestRunner(verbosity=2).run(tests)
