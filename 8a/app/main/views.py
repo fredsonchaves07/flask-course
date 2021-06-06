@@ -1,5 +1,5 @@
 from datetime import datetime
-from flask import render_template, session, redirect, url_for
+from flask import render_template, session, redirect, url_for, current_app
 from . import main
 from .forms import NameForm
 from .. import db
@@ -18,7 +18,7 @@ def index():
             db.session.add(user)
             db.session.commit()
             session['known'] = False
-            if app.config['FLASK_ADMIN']:
+            if current_app.config['FLASK_ADMIN']:
                 send_email(
                     app.config['FLASK_ADMIN'], 
                     'New User',
@@ -29,7 +29,7 @@ def index():
             session['known'] = True    
             session['name'] = form.name.data
             form.name.data = ''
-            return redirect(url_for('index'))
+            return redirect(url_for('main.index'))
 
         return render_template(
             'index.html', 
