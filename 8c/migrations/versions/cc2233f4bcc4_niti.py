@@ -1,8 +1,8 @@
-"""initial configuration
+"""niti
 
-Revision ID: 53d9f64bce16
+Revision ID: cc2233f4bcc4
 Revises: 
-Create Date: 2021-06-07 08:47:17.669571
+Create Date: 2021-06-08 13:18:06.868465
 
 """
 from alembic import op
@@ -10,7 +10,7 @@ import sqlalchemy as sa
 
 
 # revision identifiers, used by Alembic.
-revision = '53d9f64bce16'
+revision = 'cc2233f4bcc4'
 down_revision = None
 branch_labels = None
 depends_on = None
@@ -30,6 +30,7 @@ def upgrade():
     sa.Column('username', sa.String(length=64), nullable=True),
     sa.Column('role_id', sa.Integer(), nullable=True),
     sa.Column('password_hash', sa.String(length=128), nullable=True),
+    sa.Column('confirmed', sa.Boolean(), nullable=True),
     sa.ForeignKeyConstraint(['role_id'], ['roles.id'], ),
     sa.PrimaryKeyConstraint('id')
     )
